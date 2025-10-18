@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trustz.ai — Empowering Secure Digital Finance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #3050a6;
+      --accent: #1bbd83;
+      --secondary: #f44e77;
+      --bg1: #f5f7fb;
+      --bg2: #e1f5ff;
+      --muted: #8fa1b9;
+      --shadow: 0 7px 38px 0 rgba(50,80,166,.11), 0 1.5px 8px 0 rgba(244,78,119,.07);
+    }
+    body {
+      margin: 0; min-height: 100vh;
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--bg1);
+      color: #222b3c;
+    }
+    .hero {
+      background: linear-gradient(102deg, var(--primary) 57%, var(--accent) 98%);
+      padding: 58px 0 32px 0;
+      text-align: center;
+      color: #fff;
+      box-shadow: var(--shadow);
+      border-bottom-left-radius: 56px 36px;
+      border-bottom-right-radius: 56px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+    .logo {
+      width: 82px;
+      height: 82px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      background: #fff;
+      padding: 12px;
+      box-shadow: 0 2px 16px 0 rgba(36,65,167,0.08);
+      animation: logo-pop 0.8s cubic-bezier(.7,-0.3,.8,1.21);
+    }
+    @keyframes logo-pop {
+      0% { transform: scale(0.7) rotate(-8deg); opacity: 0.2;}
+      70% { transform: scale(1.12) rotate(1deg);}
+      100% { transform: scale(1) rotate(0deg); opacity: 1;}
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: 3.1rem;
+      font-weight: 900;
+      letter-spacing: -2px;
+      text-shadow: 0 2px 22px rgba(36,65,167,0.08);
+      animation: fade-in 0.95s ease;
+    }
+    .hero p {
+      margin: 13px auto 2px auto;
+      font-size: 1.32rem;
+      max-width: 400px;
+      color: #e7fbe5;
+      font-weight: 600;
+      opacity: 0.97;
+      letter-spacing: 1.1px;
+    }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 13px 38px;
+      border-radius: 8px;
+      background: linear-gradient(101deg, var(--secondary) 68%, var(--accent) 100%);
+      font-size: 1.09rem;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+      box-shadow: 0 3px 16px 0 rgba(244,78,119,0.12);
+      border: none;
+      cursor: pointer;
+      transition: background .18s, box-shadow .20s;
+      text-decoration: none;
+    }
+    .cta-btn:hover {
+      background: linear-gradient(101deg, var(--accent) 34%, var(--primary) 100%);
+      box-shadow: 0 5px 24px 0 rgba(27,189,131,0.13);
+    }
+    .main-block {
+      max-width: 700px;
+      margin: -36px auto 0 auto;
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 46px 45px 32px 45px;
+      position: relative;
+      z-index: 2;
+    }
+    h2 { color: var(--primary); font-size: 2rem; font-weight: 800; margin-bottom: 27px; letter-spacing: -1.3px;}
+    .about {
+      font-size: 1.15rem;
+      color: #273a57;
+      margin-bottom: 25px;
+      line-height: 1.7;
+    }
+    .color-row {
+      display: flex;
+      gap: 18px; margin-bottom:32px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .color-card {
+      flex: 1 1 175px;
+      background: linear-gradient(102deg, var(--bg2) 55%, #fce4ec 100%);
+      border-radius: 12px;
+      padding: 20px 15px;
+      min-width: 152px;
+      margin-top: 0; 
+      margin-bottom: 5px;
+      color: var(--primary);
+      box-shadow: 0 1.5px 8px 0 rgba(27,189,131,.08);
+      font-size: 1.04rem;
+      font-weight: 600;
+      transition: box-shadow .18s, border .2s;
+      border: 2.2px solid #e6ecfa;
+      text-align: center;
+    }
+    .color-card span {
+      font-size: 1.45rem;
+      margin-bottom: 7px;
+      display: block;
+      color: var(--secondary);
+    }
+    .core-values {
+      background: #f3fcf7;
+      padding: 21px 23px 15px 20px;
+      border-left: 5px solid var(--accent);
+      border-radius: 11px;
+      font-size: 1.07rem;
+      margin-bottom: 32px;
+      color: #25a06e;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .vision {
+      border-left: 5px solid var(--secondary);
+      background: #fef6fa;
+      padding: 18px 21px;
+      border-radius: 11px;
+      font-size: 1.09rem;
+      color: #be3b63;
+      margin-bottom: 29px;
+      font-weight: 500;
+    }
+    .contact-card {
+      background: #f6fafd;
+      border-radius: 11px;
+      box-shadow: 0 2px 17px 0 rgba(36,65,167,0.06);
+      color: #35609c;
+      padding: 17px 14px 14px 19px;
+      font-size: 1.09rem;
+    }
+    .contact-card strong {color: var(--primary);}
+    .location {display: flex; align-items: center; margin-top: 11px; gap: 7px;}
+    .location-icon {font-size: 1.27em; color: var(--accent);}
+    @media (max-width: 900px) {.main-block {max-width: 96vw; padding: 18px 8vw 22px 8vw;}}
+    @media (max-width: 600px) {.main-block {padding: 10px 2vw 18px 2vw;} .hero h1{font-size:2rem;}}
+    @keyframes fade-in {0%{opacity:0;transform:translateY(-35px);}100%{opacity:1;transform:translateY(0);}}
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <img src="Logo.jpg" alt="Trustz.ai Logo" class="logo" loading="lazy">
+    <h1>Trustz.ai</h1>
+    <p>Empowering Safe, Effortless & Trusted Digital Finance for All</p>
+    <a href="mailto:hello@trustz.ai" class="cta-btn">Contact Us</a>
+  </div>
+  <div class="main-block">
+    <h2>About Trustz.ai</h2>
+    <div class="about">
+      <b>Trustz.ai</b> is an ambitious FinTech startup using AI and smart technologies to make digital financial transactions <span style="color:var(--secondary);font-weight:600;">safer</span>, 
+      <span style="color:var(--accent);font-weight:600;">easier</span>, and <span style="color:var(--primary);font-weight:600;">more reliable</span> for individuals and enterprises worldwide. We are transforming trust in finance, one transaction at a time.
+    </div>
+    <div class="color-row">
+      <div class="color-card">
+        <span>💡</span>
+        Innovation<br>at our Core
+      </div>
+      <div class="color-card">
+        <span>🛡️</span>
+        Security<br>First Approach
+      </div>
+      <div class="color-card">
+        <span>🌍</span>
+        Global-Scale<br>Vision
+      </div>
+    </div>
+    <div class="core-values">
+      We believe in <b>transparency, integrity,</b> and <b>simple user experience</b>. Our solutions aim to empower trust and confidence in every digital payment, for both individuals and businesses.
+    </div>
+    <div class="vision">
+      <b>Vision:</b> To create a world where anyone, anywhere, can transact financially with total confidence and peace of mind.
+    </div>
+    <div class="contact-card">
+      <span><strong>Email:</strong> <a href="mailto:hello@trustz.ai" style="color:#295184;">hello@trustz.ai</a></span>
+      <div class="location">
+        <span class="location-icon" aria-hidden="true">📍</span>
+        <strong>Location:</strong> Hyderabad, India
+      </div>
+    </div>
+  </div>
+</body>
+</html>
